@@ -222,6 +222,7 @@ transport p a = transp (λ i → p i) i0 a
 -- Transporting in a constant family is the identity function (up to a
 -- path). If we would have regularity this would be definitional.
 transportRefl : (x : A) → transport refl x ≡ x
+
 transportRefl {A = A} x i = transp (λ _ → A) i x
 
 transport-filler : ∀ {ℓ} {A B : Type ℓ} (p : A ≡ B) (x : A)
